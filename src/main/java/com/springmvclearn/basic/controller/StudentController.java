@@ -4,6 +4,7 @@ import java.util.Map;
 
 import com.springmvclearn.basic.entity.Student;
 import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,12 +14,14 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 @Controller
 @Api(tags = "Student")
+@ApiOperation(value = "Student Home Page")
 @RequestMapping("/student")
 public class StudentController {
 
 	@Value("#{languageOptions}")
 	private Map<String, String> languageOptions;
 
+	@ApiOperation(value = "Student show Form")
 	@RequestMapping(value = "/showForm", method = RequestMethod.GET)
 	public String showForm(Model theModel) {
 		
@@ -31,8 +34,9 @@ public class StudentController {
 		
 		return "student-form";
 	}
-	
-	@RequestMapping("/processForm")
+
+	@ApiOperation(value = "Student Process Form with parameter get using ModelAttribute.")
+	@RequestMapping(value = "/processForm", method = RequestMethod.POST)
 	public String processForm(@ModelAttribute("student") Student theStudent) {
 		
 		// log the input data
