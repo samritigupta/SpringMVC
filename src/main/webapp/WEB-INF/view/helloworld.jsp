@@ -10,7 +10,7 @@ Hello World of Spring!
 Student name: ${param.studentName}
 Student name: ${message}
 <br/>
-<img src="${pageContext.request.contextPath}/resources/images/anniversary-card.jpg" width="500" height="600"/>
+<img src="${pageContext.request.contextPath}/resources/images/welcome.jpg" width="250" height="300"/>
 </body>
 
 </html>
