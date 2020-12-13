@@ -13,6 +13,7 @@ This project is about demostarting the use of Controller. For more information o
 
 # Deployment
 Click on the below links to see it all working.
+<br/>
 Home Page: https://springmvc-app-github.herokuapp.com
 <br/>
 Swagger UI: https://springmvc-app-github.herokuapp.com/swagger-ui.html
